@@ -1,6 +1,8 @@
+//import useEffect to change color of tab
 import React, { useEffect } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
 
+import React from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function Nav(props) {
   const {
@@ -9,6 +11,7 @@ function Nav(props) {
     currentCategory,
   } = props;
 
+  //related to line 2
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentCategory.name);
   }, [currentCategory]);
