@@ -6,7 +6,8 @@ const PhotoList = ({ category }) => {
       name: 'Grocery aisle',
       category: 'commercial',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie',
+
     },
     {
       name: 'Grocery booth',
@@ -125,7 +126,8 @@ const PhotoList = ({ category }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
+          src={require(`../../assets/small/${category}/${i}.jpg`)}
+            // src={require(`../../assets/small/${category}/${i}.jpg`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
             key={image.name}
