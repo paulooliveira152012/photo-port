@@ -6,7 +6,7 @@ import PhotoList from '..'
 
 afterEach(cleanup)
 
-describe('PhotoList is rendering', () => {
+describe('PhotoList component', () => {
   it('renders', () => {
     render(<PhotoList />);
   });

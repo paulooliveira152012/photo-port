@@ -11,8 +11,7 @@ function ContactForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!errorMessage) {
-      setFormState({ [e.target.name]: e.target.value });
-      console.log('Form', formState);
+      console.log('Submit Form', formState);
     }
   };
 
@@ -31,6 +30,10 @@ function ContactForm() {
         setErrorMessage('');
       }
     }
+    if (!errorMessage) {
+      setFormState({ ...formState, [e.target.name]: e.target.value });
+      console.log('Handle Form', formState);
+    }
   };
 
   return (
@@ -39,7 +42,6 @@ function ContactForm() {
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
-          {/* onBlur fires the verify event once the user has clicked outside the element */}
           <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
         </div>
         <div>
